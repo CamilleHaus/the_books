@@ -1,14 +1,14 @@
 import BookCard from "./BookCard";
 import { books } from "../../../data/books.js";
 
-const BooksList = ({ bookList, search }) => {
+const BooksList = ({ booksResult, search }) => {
   return (
     <div>
-      <span>Livros listados: {bookList.length}</span>
+      <span>Livros listados: {booksResult.length}</span>
       {search ? <p>Resultados de busca para: {search}</p> : null}
-      {bookList.length > 0 ? (
+      {booksResult.length > 0 ? (
         <ul>
-          {bookList.map((book) => (
+          {booksResult.map((book) => (
             <BookCard key={book.id} book={book} />
           ))}
         </ul>

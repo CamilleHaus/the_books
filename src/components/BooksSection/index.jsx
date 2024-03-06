@@ -5,23 +5,33 @@ import { books } from "../../data/books.js";
 
 const BooksSection = () => {
   const [search, setSearch] = useState("");
+  const [category, setCategory] = useState("");
 
-  const booksResult = books.filter(
-    (book) =>
-      book.name.toLowerCase().includes(search.toLowerCase()) ||
-      book.category.toLowerCase().includes(search.toLowerCase())
-  );
+  const booksResult = books.filter((book) => {
+    const searchFilter =
+      search === ""
+        ? true
+        : book.name.toLowerCase().includes(search.toLowerCase()) ||
+          book.category.toLowerCase().includes(search.toLowerCase());
 
-  const bookList = search ? booksResult : books;
+    const categoryFilter = category === "" ? true : book.category === category;
+
+    return searchFilter && categoryFilter;
+  });
 
   const cleanFilters = () => {
     setSearch("");
-  }
+    setCategory("");
+  };
 
   return (
     <section>
-      <Filters setSearch={setSearch} cleanFilters={cleanFilters}/>
-      <BooksList search={search} bookList={bookList}/>
+      <Filters
+        setSearch={setSearch}
+        cleanFilters={cleanFilters}
+        setCategory={setCategory}
+      />
+      <BooksList search={search} booksResult={booksResult} />
     </section>
   );
 };
