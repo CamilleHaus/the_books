@@ -1,9 +1,12 @@
-import HomePage from "./pages/HomePage"
+import HomePage from "./pages/HomePage";
+import { BookProvider } from "./providers/BookContext";
 
 const App = () => {
   return (
-    <HomePage />
-  )
-}
+    <BookProvider>
+      <HomePage />
+    </BookProvider>
+  );
+};
 
-export default App
+export default App;

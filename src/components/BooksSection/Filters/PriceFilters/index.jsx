@@ -1,4 +1,10 @@
-const PriceFilters = ({ min, setMin, max, setMax }) => {
+import { useContext } from "react";
+import { BookContext } from "../../../../providers/BookContext";
+
+const PriceFilters = () => {
+
+  const { min, setMin, max, setMax } = useContext(BookContext);
+
   return (
     <div>
       <h3>Filtrar por preço</h3>

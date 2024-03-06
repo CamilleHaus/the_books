@@ -1,21 +1,18 @@
+import { useContext } from "react";
 import CategoryFilters from "./CategoryFilters";
 import PriceFilters from "./PriceFilters";
 import SearchForm from "./SearchForm";
+import { BookContext } from "../../../providers/BookContext";
 
-const Filters = ({
-  setSearch,
-  cleanFilters,
-  setCategory,
-  min,
-  setMin,
-  max,
-  setMax,
-}) => {
+const Filters = () => {
+
+  const { cleanFilters } = useContext(BookContext);
+
   return (
     <div>
-      <SearchForm setSearch={setSearch} />
-      <CategoryFilters setCategory={setCategory} />
-      <PriceFilters min={min} setMin={setMin} max={max} setMax={setMax} />
+      <SearchForm />
+      <CategoryFilters />
+      <PriceFilters />
       <button onClick={cleanFilters}>Limpar filtro</button>
     </div>
   );

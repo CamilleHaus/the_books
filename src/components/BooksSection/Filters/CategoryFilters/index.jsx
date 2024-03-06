@@ -1,6 +1,11 @@
+import { useContext } from "react";
 import { categories } from "../../../../data/category.js";
+import { BookContext } from "../../../../providers/BookContext/index.jsx";
 
-const CategoryFilters = ({setCategory}) => {
+const CategoryFilters = () => {
+
+  const { setCategory } = useContext(BookContext);
+
   return (
     <div>
       <h3>Filtrar por categoria</h3>

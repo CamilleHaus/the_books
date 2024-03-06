@@ -1,6 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { BookContext } from "../../../../providers/BookContext";
 
-const SearchForm = ({ setSearch }) => {
+const SearchForm = () => {
+
+  const { setSearch } = useContext(BookContext);
+
   const [value, setValue] = useState("");
 
   const submit = (e) => {

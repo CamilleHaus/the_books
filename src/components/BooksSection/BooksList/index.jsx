@@ -1,7 +1,11 @@
 import BookCard from "./BookCard";
-import { books } from "../../../data/books.js";
+import { useContext } from "react";
+import { BookContext } from "../../../providers/BookContext";
 
-const BooksList = ({ booksResult, search }) => {
+const BooksList = () => {
+  
+  const { search, booksResult } = useContext(BookContext);
+
   return (
     <div>
       <span>Livros listados: {booksResult.length}</span>
