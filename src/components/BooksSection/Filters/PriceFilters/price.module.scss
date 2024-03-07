@@ -1,0 +1,31 @@
+.div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 25px;
+
+    h3 {
+        font-weight: bold;
+    }
+}
+
+.divInput {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+
+    input {
+        border: 1px solid var(--color-primary);
+        border-radius: 5px;
+
+        padding: 15px;
+
+        width: 60%;
+
+    }
+
+    input::placeholder {
+        font-size: var(--subtitle);
+    }
+}

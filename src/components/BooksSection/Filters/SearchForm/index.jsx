@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { BookContext } from "../../../../providers/BookContext";
+import styles from "../SearchForm/search.module.scss";
 
 const SearchForm = () => {
 
@@ -13,9 +14,10 @@ const SearchForm = () => {
     setValue("");
   };
   return (
-    <form onSubmit={submit}>
+    <form onSubmit={submit} className={styles.form}>
       <input
         type="text"
+        placeholder="Pesquisar..."
         value={value}
         onChange={(e) => setValue(e.target.value)}
         required

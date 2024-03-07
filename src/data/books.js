@@ -29,4 +29,16 @@ export const books = [
     category: "Romance",
     price: 37.80,
   },
+  {
+    id: 5,
+    name: "Os Ratos",
+    category: "Fantasia",
+    price: 49.97,
+  },
+  {
+    id: 6,
+    name: "A Arte da Guerra",
+    category: "Ação",
+    price: 44.32,
+  },
 ];

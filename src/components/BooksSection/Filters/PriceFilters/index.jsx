@@ -1,17 +1,19 @@
 import { useContext } from "react";
 import { BookContext } from "../../../../providers/BookContext";
+import styles from "../PriceFilters/price.module.scss"
 
 const PriceFilters = () => {
 
   const { min, setMin, max, setMax } = useContext(BookContext);
 
   return (
-    <div>
+    <div className={styles.div}>
       <h3>Filtrar por preço</h3>
-      <div>
-        <label htmlFor="min">Minímo R$</label>
+      <div className={styles.divInput}>
+        <label htmlFor="min">Minímo (R$)</label>
         <input
           type="number"
+          placeholder="25"
           name="min"
           id="min"
           value={min}
@@ -19,10 +21,11 @@ const PriceFilters = () => {
           min="1"
         />
       </div>
-      <div>
-        <label htmlFor="max">Maxímo R$</label>
+      <div className={styles.divInput}>
+        <label htmlFor="max">Maxímo (R$)</label>
         <input
           type="number"
+          placeholder="100"
           name="max"
           id="max"
           value={max}

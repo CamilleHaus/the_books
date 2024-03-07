@@ -1,6 +1,8 @@
+import styles from "../BookCard/bookCard.module.scss";
+
 const BookCard = ({ book }) => {
   return (
-    <li>
+    <li className={styles.li}>
       <div>
         <h3>{book.name}</h3>
         <p>{book.category}</p>

@@ -1,0 +1,17 @@
+.section {
+    background-color: var(--color-primary);
+
+    padding: 40px;
+
+    h1 {
+        max-width: 1200px;
+        
+        font-size: var(--title);
+        font-weight: bold;
+
+        color: var(--background-color);
+
+        margin-inline: auto;
+        
+    }
+}

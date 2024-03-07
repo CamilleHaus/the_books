@@ -1,0 +1,30 @@
+.div {
+    display: flex;
+    flex-direction: column;
+
+    width: 65%;
+
+    margin-top: 35px;
+
+    gap: 40px;
+
+}
+
+.ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 100%;
+    gap: 35px;
+
+    
+}
+
+.span {
+        display: flex;
+        justify-content: flex-end;
+
+        font-weight: bold;
+
+        margin-top: 30px;
+}

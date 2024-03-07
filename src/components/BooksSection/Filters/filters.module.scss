@@ -1,0 +1,17 @@
+.filters {
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+
+    button {
+        padding: 15px;
+
+        background-color: var(--color-primary);
+        color: var(--background-color);
+
+        font-size: var(--subtitle);
+
+        border-radius: 5px;
+    }
+}
